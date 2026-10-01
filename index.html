@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎈Balloon Pop Math</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="game">
+    <div class="sun"></div>
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+    <div class="cloud cloud-three"></div>
+
+    <section class="top-bar">
+      <div class="hud-box">
+        <div class="hud-item"><b id="level">1</b><span>Level</span></div>
+        <div class="hud-item"><b id="score">0</b><span>Score</span></div>
+        <div class="hud-item"><b id="goal">0/6</b><span>Goal</span></div>
+        <div class="hud-item"><b id="lives">♥♥♥</b><span>Lives</span></div>
+      </div>
+
+      <div class="question-box">
+        <span>Find the answer</span>
+        <h1 id="equation">Ready?</h1>
+      </div>
+
+      <div class="button-box">
+        <button id="pauseBtn" title="Pause game">Ⅱ</button>
+        <button id="soundBtn" title="Sound on/off">♪</button>
+        <button id="settingsBtn" title="Settings">⚙</button>
+      </div>
+    </section>
+
+    <div id="playfield" class="playfield"></div>
+    <div id="message" class="message hidden"></div>
+
+    <div id="countdown" class="countdown hidden">
+      <div id="countNumber">3</div>
+    </div>
+
+    <section id="menuScreen" class="screen">
+      <div class="card">
+        <div class="badge">Balloon Pop Math</div>
+        <h2>Addition & Subtraction</h2>
+        <p>Pop the balloon with the correct answer before it flies away.</p>
+
+        <div class="save-row">
+          <div><b id="bestScore">0</b><span>Best Score</span></div>
+          <div><b id="bestLevel">1</b><span>Saved Level</span></div>
+        </div>
+
+        <button id="playBtn" class="main-btn">Play</button>
+        <button id="mainSettingsBtn" class="small-btn">Settings</button>
+        <button id="rulesBtn" class="small-btn">Rules</button>
+      </div>
+    </section>
+
+    <section id="settingsPanel" class="screen hidden">
+      <div class="card settings-card">
+        <h2>Settings</h2>
+
+        <label class="setting-line">
+          <span>Music</span>
+          <input type="checkbox" id="musicToggle" checked />
+        </label>
+
+        <label class="setting-line">
+          <span>Sound Effects</span>
+          <input type="checkbox" id="effectsToggle" checked />
+        </label>
+
+        <button id="resetBtn" class="small-btn">Reset Progress</button>
+        <button id="closeSettingsBtn" class="main-btn">Back</button>
+      </div>
+    </section>
+
+    <section id="rulesScreen" class="screen hidden">
+      <div class="card">
+        <h2>Rules</h2>
+        <p>Look at the equation at the top.</p>
+        <p>Pop only the balloon with the correct answer.</p>
+        <p>If the correct balloon flies away, you lose one life.</p>
+        <p>Every new level gives your 3 lives back.</p>
+        <p>From level 4, green heart balloons can give back one life.</p>
+        <button id="closeRulesBtn" class="main-btn">Back</button>
+      </div>
+    </section>
+
+    <section id="pauseScreen" class="screen hidden">
+      <div class="card">
+        <h2>Paused</h2>
+        <p>The balloons are stopped. Ready to continue?</p>
+        <button id="resumeBtn" class="main-btn">Resume</button>
+        <button id="pauseMenuBtn" class="small-btn">Main Menu</button>
+      </div>
+    </section>
+
+    <section id="levelCompleteScreen" class="screen hidden">
+      <div class="card">
+        <h2 id="levelCompleteTitle">Level Complete!</h2>
+        <p id="levelCompleteText">Great job! Your progress is saved.</p>
+
+        <div class="save-row">
+          <div><b id="levelScore">0</b><span>Score</span></div>
+          <div><b id="nextLevelDisplay">2</b><span>Next Level</span></div>
+        </div>
+
+        <button id="nextLevelBtn" class="main-btn">Next Level</button>
+        <button id="levelMenuBtn" class="small-btn">Main Menu</button>
+      </div>
+    </section>
+
+    <section id="gameOverScreen" class="screen hidden">
+      <div class="card">
+        <h2>Game Over</h2>
+        <p>You used all your lives. Try again and beat your score!</p>
+
+        <div class="save-row">
+          <div><b id="finalScore">0</b><span>Score</span></div>
+          <div><b id="finalLevel">1</b><span>Level</span></div>
+        </div>
+
+        <button id="playAgainBtn" class="main-btn">Play Again</button>
+        <button id="backMenuBtn" class="small-btn">Main Menu</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
